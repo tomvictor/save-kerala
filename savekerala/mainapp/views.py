@@ -14,7 +14,7 @@ from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
 
 )
-
+from django.shortcuts import redirect, get_object_or_404
 from mainapp.models import *
 
 class CampHome(TemplateView):
@@ -84,6 +84,8 @@ class CampQuery(APIView):
             print("get the query")
             query = self.request.GET.get("q")
             message = "query sucess"
+            print(message)
+            print(query)
         except:
             print("except query")
             message = "unable to get query"
@@ -98,7 +100,8 @@ class CampQuery(APIView):
         try:
             # retrive the camps
             print("getting camps")
-
+            camps = Camp.objects.filter(district__id=int(query))
+            print(camps)
 
         except:
             message = "unable to get data"
