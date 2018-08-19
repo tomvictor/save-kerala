@@ -9,7 +9,7 @@ class Camp(models.Model):
     title = models.CharField(max_length=1000)
     latitude = models.FloatField(blank=True, null=True)
     longitude = models.FloatField(blank=True,null=True)
-    location = models.FloatField(blank=True,null=True)
+    location = models.TextField(blank=True,null=True)
     contact_no = models.CharField(max_length=20)
     alternative_no = models.CharField(max_length = 20)
     timestamp = models.DateTimeField(auto_now_add=True)
