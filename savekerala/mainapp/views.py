@@ -50,3 +50,68 @@ class CamplListApi(APIView):
         }
 
         return Response(context,status=status.HTTP_200_OK)
+
+
+class DistrictList(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self,*args,**kwargs):
+        dist_list = []
+        for dist in Districts.objects.all():
+            print(dist)
+            atomic_dist = {
+                "title" : dist.title,
+                "id"  : dist.id
+            }
+            dist_list.append(atomic_dist)
+        
+        context = {
+            "status" : 1,
+            "message" : "sucess",
+            "dist"  : dist_list
+        }
+        return Response(context,status=status.HTTP_200_OK)
+
+
+class CampQuery(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self,*args,**kwargs):
+        req = self.request
+        status_code = 0
+        message = "fail"
+        try:
+            print("get the query")
+            query = self.request.GET.get("q")
+            message = "query sucess"
+        except:
+            print("except query")
+            message = "unable to get query"
+            status_code = 0
+            context = {
+                "message" : message,
+                "code" : status_code
+            }
+            return Response(context,status=status.HTTP_200_OK)
+        
+        # get the camplist
+        try:
+            # retrive the camps
+            print("getting camps")
+
+
+        except:
+            message = "unable to get data"
+            status_code  = 0
+            print("exept camp")
+            context = {
+                "message" : message,
+                "code" : status_code
+            }
+            return Response(context,status=status.HTTP_200_OK)
+
+        context = {
+            "message" : "fail",
+            "code" : 0
+        }
+        return Response(context, status=status.HTTP_404_NOT_FOUND)
