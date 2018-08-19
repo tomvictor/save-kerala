@@ -7,5 +7,6 @@ from django.views.generic import TemplateView
 
 
 
-class EmergencyNo(TemplateView):
-    template_name = 'mainapp/emer_numbers.html'
+class CampHome(TemplateView):
+    template_name = 'mainapp/camp/index.html'
+

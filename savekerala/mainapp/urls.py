@@ -19,5 +19,5 @@ from mainapp import views
 app_name = "mainapp"
 
 urlpatterns = [
-    path('',views.EmergencyNo.as_view(), name="energency-no"),
+    path('',views.CampHome.as_view(), name="camp"),
 ]
