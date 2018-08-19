@@ -19,5 +19,5 @@ from mainapp import views
 app_name = "mainapp"
 
 urlpatterns = [
-    path('emergency/',views.EmergencyNo.as_view(), name="energency-no"),
+    path('',views.EmergencyNo.as_view(), name="energency-no"),
 ]

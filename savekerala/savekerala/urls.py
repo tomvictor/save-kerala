@@ -20,8 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('home/admin/', admin.site.urls),
-    path('home/',include('mainapp.urls',namespace="mainapp")),
+    path('info/admin/', admin.site.urls),
+    path('camps/',include('mainapp.urls',namespace="mainapp")),
 
 ]
 
