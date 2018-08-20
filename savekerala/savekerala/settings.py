@@ -25,7 +25,7 @@ SECRET_KEY = '11p(j9d&xg*)+6@)33d5!_6-jric78(twgw@m3pil!bvb%38#e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['savekerala.xyz','savekerala.xyz']
 
 
 # Application definition
