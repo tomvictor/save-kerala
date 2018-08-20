@@ -24,6 +24,8 @@ class CampHome(TemplateView):
     #     context = {}
     #     return context
 
+class About(TemplateView):
+    template_name = 'mainapp/about.html'
 
 
 class CamplListApi(APIView):
