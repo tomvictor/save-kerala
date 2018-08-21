@@ -18,6 +18,8 @@ class Districts(models.Model):
 
 class Camp(models.Model):
     title = models.CharField(max_length=1000)
+    place = models.CharField(max_length=2500, blank=True,null=True)
+    locality = models.CharField(max_length=2500,blank=True,null=True)
     latitude = models.FloatField(blank=True, null=True)
     longitude = models.FloatField(blank=True,null=True)
     location = models.TextField(blank=True,null=True)

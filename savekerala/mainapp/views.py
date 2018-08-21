@@ -20,9 +20,11 @@ from mainapp.models import *
 class CampHome(TemplateView):
     template_name = 'mainapp/camp/index.html'
 
-    # def get_context_data(self,*args,**kwargs):
-    #     context = {}
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.all()
+        return context
 
 class About(TemplateView):
     template_name = 'mainapp/about.html'
