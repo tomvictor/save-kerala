@@ -57,6 +57,16 @@ class ItemType(models.Model):
         return self.title
 
 
+
+AVAILABLE = 1
+SHORTAGE = 0
+
+STOCK_CHOICES = (
+    (AVAILABLE, 'AVILABLE'),
+    (SHORTAGE, 'SHORTAGE'),
+)
+
+
 class Item(models.Model):
     title  = models.CharField(max_length = 50)
     item_type = models.ForeignKey(ItemType,on_delete=models.CASCADE)
@@ -64,6 +74,7 @@ class Item(models.Model):
     quantity = models.FloatField(default=1)
     unit    = models.CharField(max_length = 50,default="Numbers")
     # excess  = models.BooleanField(default=False)
+    stock_status = models.IntegerField(choices=STOCK_CHOICES, default=AVAILABLE)
     timestamp = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
 
