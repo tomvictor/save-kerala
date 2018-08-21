@@ -65,8 +65,8 @@
           <file leaf-file-name="camp_detail.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="328">
-                  <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+                <state relative-caret-position="238">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <element signature="e#711#736#0#HTML" expanded="true" />
                     <element signature="e#1731#1756#0#HTML" expanded="true" />
@@ -90,7 +90,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mainapp/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="169">
@@ -111,11 +111,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mainapp/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="376">
-                  <caret line="76" column="16" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="16" />
+                <state relative-caret-position="475">
+                  <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -145,11 +145,11 @@
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camplist.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp/camp_detail.html" />
         <option value="$PROJECT_DIR$/mainapp/urls.py" />
-        <option value="$PROJECT_DIR$/mainapp/models.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html" />
+        <option value="$PROJECT_DIR$/mainapp/models.py" />
       </list>
     </option>
   </component>
@@ -386,16 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="76" column="16" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/savekerala/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -419,8 +409,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="69" column="74" selection-start-line="69" selection-start-column="74" selection-end-line="69" selection-end-column="74" />
+        <state relative-caret-position="169">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -447,13 +437,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#711#736#0#HTML" expanded="true" />
             <element signature="e#1731#1756#0#HTML" expanded="true" />
             <element signature="e#3157#4795#0#HTML" />
             <element signature="e#3723#3749#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
