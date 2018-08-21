@@ -1,0 +1,91 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1 class="my-4">{{ thisCamp.title|upper }}</h1>
+        <p>District : {{ thisCamp.locality.district|capfirst }} |
+            Locality : {{ thisCamp.locality }} |
+            Contact Name : {{ thisCamp.contact_name|capfirst }} : {{ thisCamp.contact_no }}
+        </p>
+
+        <div class="row">
+
+
+            <div class="col-lg-9">
+
+                <div class="row">
+                    {% for sto in stock %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            {% if sto.stock_status == 1 %}
+                                <div class="card border-success mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">{{ sto.item_type.title|upper }}</div>
+                                    <div class="card-body text-success">
+                                        <h5 class="card-title">{{ sto.title|upper }}</h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">{{ sto.quantity }} - {{ sto.unit }}</li>
+                                            <li class="list-group-item">Laste updated
+                                                : {{ sto.last_updated|timesince }}</li>
+                                            {#                                        <li class="list-group-item">Timestamp : {{ sto.timestamp|timesince }}</li>#}
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            {% elif sto.stock_status == 0 %}
+                                <div class="card border-danger mb-3" style="max-width: 18rem;">
+                                    <div class="card-header">{{ sto.item_type.title|upper }}</div>
+                                    <div class="card-body text-danger">
+                                        <h5 class="card-title">{{ sto.title|upper }}</h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">{{ sto.quantity }} - {{ sto.unit }}</li>
+                                            <li class="list-group-item">Laste updated
+                                                : {{ sto.last_updated|timesince }}</li>
+                                            {#                                        <li class="list-group-item">Timestamp : {{ sto.timestamp|timesince }}</li>#}
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            {% endif %}
+
+
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+            <div class="col-lg-3">
+
+                <form method="GET" action="/camps/search/">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Camp Stock update</label>
+                        <input type="" class="form-control" id="search" name="q" aria-describedby="emailHelp"
+                               placeholder="Ernakulam">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+                <br>
+
+                <div class="list-group">
+                    {% for di in dists %}
+                        <a href="/camps/district/?q={{ di.id }}" class="list-group-item">{{ di.title }}</a>
+                    {% endfor %}
+                </div>
+
+                <br>
+
+            </div>
+            <!-- /.col-lg-3 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+{% endblock %}

@@ -17,12 +17,82 @@ from rest_framework.permissions import (
 from django.shortcuts import redirect, get_object_or_404
 from mainapp.models import *
 
-class CampHome(TemplateView):
-    template_name = 'mainapp/camp/index.html'
+class CampList(TemplateView):
+    template_name = 'mainapp/camplist.html'
 
-    # def get_context_data(self,*args,**kwargs):
-    #     context = {}
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.all()
+        context["locality"] = Locality.objects.all()
+        return context
+
+class CampList2(TemplateView):
+    template_name = 'mainapp/camplist2.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.all()
+        context["locality"] = Locality.objects.all()
+        return context
+
+
+class Search(TemplateView):
+    template_name = 'mainapp/camplist2.html'
+
+    def get_context_data(self, **kwargs):
+
+        try:
+            q = self.request.GET.get("q")
+        except:
+            q = 1
+        print(q)
+
+        context = super().get_context_data(**kwargs)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.filter(title__icontains=q)
+        context["locality"] = Locality.objects.all()
+        return context
+
+
+class DistrictFil(TemplateView):
+    template_name = 'mainapp/camplist2.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        try:
+            q = self.request.GET.get("q")
+        except:
+            q = 1
+        print(q)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.filter(locality__district__id=int(q))
+        context["locality"] = Locality.objects.all()
+        return context
+
+class CampDetail(TemplateView):
+    template_name = 'mainapp/camp_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        try:
+            q = self.request.GET.get("q")
+            print(q)
+            camp = get_object_or_404(Camp,id=int(q))
+            context["thisCamp"] = camp
+            context["stock"]    = Item.objects.filter(camp=camp)
+            print(context["stock"])
+        except:
+            d_camp = Camp.objects.first()
+            context["thisCamp"] = d_camp
+            context["stock"] = Item.objects.filter(camp=d_camp)
+
+        print(q)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.filter(locality__district__id=int(q))
+        context["locality"] = Locality.objects.all()
+        return context
 
 class About(TemplateView):
     template_name = 'mainapp/about.html'

@@ -19,8 +19,12 @@ from mainapp import views
 app_name = "mainapp"
 
 urlpatterns = [
-    path('camps/',views.CampHome.as_view(), name="camp"),
-    path('about/',views.CampHome.as_view(), name="camp"),
+    # path('camps/',views.CampList.as_view(), name="camp"),
+    path('camps/',views.CampList2.as_view(), name="camp2"),
+    path('camps/district/',views.DistrictFil.as_view(), name="dis"),
+    path('camps/detail/',views.CampDetail.as_view(), name="camp_detail"),
+    path('camps/search/',views.Search.as_view(), name="search"),
+    path('about/',views.About.as_view(), name="camp"),
     path('api/list/',views.CamplListApi.as_view(), name="camplist"),
     path('api/dist/',views.DistrictList.as_view(), name="camplist"),
     path('api/query/dist/',views.CampQuery.as_view(), name="campquery"),
