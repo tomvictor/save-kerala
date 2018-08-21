@@ -63,7 +63,7 @@ class Item(models.Model):
     camp = models.ForeignKey(Camp,on_delete=models.CASCADE)
     quantity = models.FloatField(default=1)
     unit    = models.CharField(max_length = 50,default="Numbers")
-    excess  = models.BooleanField(default=False)
+    # excess  = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
 

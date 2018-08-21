@@ -2,35 +2,6 @@
 
 {% block content %}
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">savekerala.xyz</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="https://savekerala.xyz">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Request Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Live Updates</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Page Content -->
     <div class="container">
     <h1 class="my-4">Locality List</h1>
@@ -38,8 +9,6 @@
         <div class="row">
 
             <div class="col-lg-3">
-
-
 
                 <form method="GET" action="/camps/search/">
                     <div class="form-group">
@@ -71,7 +40,7 @@
                                 <!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        <a href="#">{{ camp.title }}</a>
+                                        <a href="/camps/detail/?q={{ camp.id }}">{{ camp.title }}</a>
                                     </h4>
                                     <h5>{{ camp.locality.district }}</h5>
                                     <p class="card-text">{{ camp.location }}</p>

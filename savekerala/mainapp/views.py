@@ -71,6 +71,29 @@ class DistrictFil(TemplateView):
         context["locality"] = Locality.objects.all()
         return context
 
+class CampDetail(TemplateView):
+    template_name = 'mainapp/camp_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        try:
+            q = self.request.GET.get("q")
+            print(q)
+            camp = get_object_or_404(Camp,id=int(q))
+            context["thisCamp"] = camp
+            context["stock"]    = Item.objects.filter(camp=camp)
+            print(context["stock"])
+        except:
+            d_camp = Camp.objects.first()
+            context["thisCamp"] = d_camp
+            context["stock"] = Item.objects.filter(camp=d_camp)
+
+        print(q)
+        context["dists"] = Districts.objects.all()
+        context["camps"] = Camp.objects.filter(locality__district__id=int(q))
+        context["locality"] = Locality.objects.all()
+        return context
+
 class About(TemplateView):
     template_name = 'mainapp/about.html'
 

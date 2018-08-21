@@ -1,0 +1,76 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+
+    <!-- Page Content -->
+    <div class="container">
+    <h1 class="my-4">{{ thisCamp.title|upper }}</h1>
+    <p>District : {{ thisCamp.locality.district|capfirst }} |
+    Locality : {{ thisCamp.locality }} |
+        Contact Name : {{ thisCamp.contact_name|capfirst }} : {{ thisCamp.contact_no }}
+    </p>
+
+        <div class="row">
+
+
+
+            <div class="col-lg-9">
+
+                <div class="row">
+                    {% for sto in stock %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card h-100">
+                                <!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        <a href="#">{{ sto.title }}</a>
+                                    </h4>
+                                    <h5>{{ sto.item_type }}</h5>
+{#                                    <p class="card-text">{{ camp.location }}</p>#}
+{#                                     <p class="card-text">{{ camp.contact_name|capfirst }} : {{ camp.contact_no }}</p>#}
+
+                                </div>
+{#                                <div class="card-footer">#}
+{#                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>#}
+{#                                </div>#}
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+         <div class="col-lg-3">
+
+                <form method="GET" action="/camps/search/">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Camp Stock update</label>
+                        <input type="" class="form-control" id="search" name="q" aria-describedby="emailHelp"
+                               placeholder="Ernakulam">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            <br>
+
+                <div class="list-group">
+                    {% for di in dists %}
+                        <a href="/camps/district/?q={{ di.id }}" class="list-group-item">{{ di.title }}</a>
+                    {% endfor %}
+                </div>
+
+            <br>
+
+            </div>
+            <!-- /.col-lg-3 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+{% endblock %}
