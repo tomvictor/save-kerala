@@ -25,6 +25,7 @@
                                     <div class="card-body text-success">
                                         <h5 class="card-title">{{ sto.title|upper }}</h5>
                                         <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Excess</b></li>
                                             <li class="list-group-item">{{ sto.quantity }} - {{ sto.unit }}</li>
                                             <li class="list-group-item">Laste updated
                                                 : {{ sto.last_updated|timesince }}</li>
@@ -39,6 +40,7 @@
                                     <div class="card-body text-danger">
                                         <h5 class="card-title">{{ sto.title|upper }}</h5>
                                         <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Required</b></li>
                                             <li class="list-group-item">{{ sto.quantity }} - {{ sto.unit }}</li>
                                             <li class="list-group-item">Laste updated
                                                 : {{ sto.last_updated|timesince }}</li>
@@ -74,7 +76,7 @@
 
                 <div class="list-group">
                     {% for di in dists %}
-                        <a href="/camps/district/?q={{ di.id }}" class="list-group-item">{{ di.title }}</a>
+                        <a href="/camps/district/?q={{ di.title }}" class="list-group-item">{{ di.title }}</a>
                     {% endfor %}
                 </div>
 

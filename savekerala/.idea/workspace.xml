@@ -28,7 +28,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mainapp/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="294">
@@ -52,15 +52,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="camp_detail.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="camp_detail.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="25" column="81" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
+                <state relative-caret-position="435">
+                  <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
                   <folding>
                     <element signature="e#711#736#0#HTML" expanded="true" />
                     <element signature="e#1731#1756#0#HTML" expanded="true" />
-                    <element signature="e#2872#3694#0#HTML" />
                   </folding>
                 </state>
               </provider>
@@ -135,10 +134,10 @@
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp/camp_detail.html" />
         <option value="$PROJECT_DIR$/mainapp/urls.py" />
         <option value="$PROJECT_DIR$/mainapp/models.py" />
-        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html" />
       </list>
     </option>
   </component>
@@ -273,7 +272,7 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.32917705" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.30673316" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.30673316" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.2446352" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -413,18 +412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" column="81" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
-          <folding>
-            <element signature="e#711#736#0#HTML" expanded="true" />
-            <element signature="e#1731#1756#0#HTML" expanded="true" />
-            <element signature="e#2872#3694#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -441,6 +428,17 @@
           <caret line="69" column="74" selection-start-line="69" selection-start-column="74" selection-end-line="69" selection-end-column="74" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+          <folding>
+            <element signature="e#711#736#0#HTML" expanded="true" />
+            <element signature="e#1731#1756#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
