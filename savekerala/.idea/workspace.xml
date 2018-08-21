@@ -40,12 +40,22 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/base.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="333">
+                  <caret line="64" column="124" selection-start-line="64" selection-start-column="124" selection-end-line="64" selection-end-column="124" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="camplist2.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="149">
-                  <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+                <state relative-caret-position="134">
+                  <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="53" selection-end-column="31" />
                   <folding>
+                    <element signature="e#283#1105#0#HTML" />
                     <element signature="e#761#787#0#HTML" expanded="true" />
                   </folding>
                 </state>
@@ -55,11 +65,13 @@
           <file leaf-file-name="camp_detail.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+                <state relative-caret-position="328">
+                  <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
                   <folding>
                     <element signature="e#711#736#0#HTML" expanded="true" />
                     <element signature="e#1731#1756#0#HTML" expanded="true" />
+                    <element signature="e#3157#4795#0#HTML" />
+                    <element signature="e#3723#3749#0#HTML" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -134,9 +146,9 @@
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp/camp_detail.html" />
         <option value="$PROJECT_DIR$/mainapp/urls.py" />
         <option value="$PROJECT_DIR$/mainapp/models.py" />
-        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html" />
         <option value="$PROJECT_DIR$/mainapp/views.py" />
+        <option value="$PROJECT_DIR$/mainapp/templates/mainapp/base.html" />
         <option value="$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html" />
       </list>
     </option>
@@ -398,27 +410,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="40" column="83" selection-start-line="40" selection-start-column="83" selection-end-line="40" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/savekerala/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding>
-            <element signature="e#761#787#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -432,13 +427,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="64" column="124" selection-start-line="64" selection-start-column="124" selection-end-line="64" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camplist2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="53" selection-end-column="31" />
+          <folding>
+            <element signature="e#283#1105#0#HTML" />
+            <element signature="e#761#787#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainapp/templates/mainapp/camp_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+        <state relative-caret-position="328">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
           <folding>
             <element signature="e#711#736#0#HTML" expanded="true" />
             <element signature="e#1731#1756#0#HTML" expanded="true" />
+            <element signature="e#3157#4795#0#HTML" />
+            <element signature="e#3723#3749#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
