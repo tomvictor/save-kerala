@@ -67,7 +67,7 @@ class DistrictFil(TemplateView):
             q = 1
         print(q)
         context["dists"] = Districts.objects.all()
-        context["camps"] = Camp.objects.filter(locality__district__id=int(q))
+        context["camps"] = Camp.objects.filter(locality__district__title=q)
         context["locality"] = Locality.objects.all()
         return context
 
