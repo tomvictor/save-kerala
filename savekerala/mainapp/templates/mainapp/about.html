@@ -40,27 +40,21 @@
                     <a href="tel:+918075227231">+91 8075 227 231</a> <br>
                 </p>
 
-            <h1 style="text-align: center">Our Team</h1>
+                <h1 style="text-align: center">Our Team</h1>
+                <br>
 
 
                 <div class="row">
                     {% for hero in heroes %}
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="card h-100">
-                                <!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        {{ camp.title }}
-                                    </h4>
-                                    <h5>{{ camp.locality.district }}</h5>
-                                    <p class="card-text">{{ camp.location }}</p>
-                                    <p class="card-text">{{ camp.contact_name|capfirst }} : {{ camp.contact_no }}</p>
 
+                                <div class="card border-success mb-3" style="max-width: 18rem;">
+{#                                    <div class="card-header">Header</div>#}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ hero.name }}</h5>
+                                        <p class="card-text">{{ hero.place }}</p>
+                                    </div>
                                 </div>
-                                {#                                <div class="card-footer">#}
-                                {#                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>#}
-                                {#                                </div>#}
-                            </div>
                         </div>
                     {% endfor %}
 
