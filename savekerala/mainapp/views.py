@@ -97,6 +97,12 @@ class CampDetail(TemplateView):
 class About(TemplateView):
     template_name = 'mainapp/about.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["heroes"] = Hero.objects.all().order_by("rank")
+        context["team"] = Hero.objects.all().order_by("rank")[3:]
+        return context
+
 
 class CamplListApi(APIView):
 

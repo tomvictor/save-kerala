@@ -81,3 +81,39 @@ class Item(models.Model):
     def __str__(self):
         return self.title
 
+class Hero(models.Model):
+    name = models.CharField(max_length=250)
+    place = models.CharField(max_length=250, blank=True,null=True)
+    rank   = models.IntegerField(unique=True)
+    short_dic = models.TextField(blank=True,null=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+    reserved1 = models.CharField(max_length=1000, blank=True,null=True)
+    reserved2 = models.CharField(max_length=1000,blank=True,default=True)
+
+    def __str__(self):
+        return self.name
+
+class Feedbacks(models.Model):
+    name = models.CharField(max_length=250)
+    place = models.CharField(max_length=250)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+    content = models.TextField()
+    email = models.CharField(max_length=250, blank=True, null=True)
+    mobile = models.CharField(max_length=250, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+class ContactUs(models.Model):
+    name = models.CharField(max_length=250)
+    email = models.CharField(max_length=250)
+    phone_number = models.CharField(max_length=250, blank=True,null=True)
+    content = models.TextField()
+    timestamp = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.name

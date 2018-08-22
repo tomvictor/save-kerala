@@ -1,10 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>about</title>
-</head>
-<body>
-<h1>About</h1>
-</body>
-</html>
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+        <div class="row">
+
+
+            <div class="col-lg-2">
+
+
+            </div>
+            <!-- /.col-lg-3 -->
+
+
+            <div class="col-lg-8">
+                <br>
+                <h1 style="text-align: center">About Us</h1>
+
+                <b>W</b>e are a group of young engineers from Kochi, decided to do someting for the fellow brothers and
+                sisters
+                who where stranded by the devestating flood in Krala. Then we think ablout all possible solutions and
+                came up with and idea of realtime web portal for
+                instant help. At the time we starated coding we were only there individuals, But now are a large
+                community of like
+                minded peoples with lot of energy. It took us one night to build the entire project, It took only hours
+                to spread the information and to populating with help requests.
+                We all are doing our best to help people, those who suffers horribly these days. We congragulate everone
+                with helping hearts, those were the part of the <a
+                    href="https://savekerala.xyz"><b>savekerala.xyz</b></a>.
+                <br><br>
+                <p>Write to us :
+                    <a href="mailto:vjtomvictor@gmail.com ?Subject=savekerala.xyz"
+                       target="_top">vjtomvictor@gmail.com </a>
+                    <br>
+                    Contact :
+                    <a href="tel:+918075227231">+91 8075 227 231</a> <br>
+                </p>
+
+                <h1 style="text-align: center">Our Team</h1>
+                <br>
+
+
+                <div class="row">
+                    {% for hero in heroes %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+
+                                <div class="card border-success mb-3" style="max-width: 18rem;">
+{#                                    <div class="card-header">Header</div>#}
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ hero.name }}</h5>
+                                        <p class="card-text">{{ hero.place }}</p>
+                                    </div>
+                                </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.col-lg-9 -->
+            <div class="col-lg-2">
+
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+{% endblock %}
