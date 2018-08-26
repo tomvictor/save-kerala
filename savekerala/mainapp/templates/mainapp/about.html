@@ -51,7 +51,7 @@
                                 <div class="card border-success mb-3" style="max-width: 18rem;">
 {#                                    <div class="card-header">Header</div>#}
                                     <div class="card-body">
-                                        <h5 class="card-title">{{ hero.name }}</h5>
+                                        <h5 class="card-title"> <a href="{{ hero.facebook }}" target="_blank">{{ hero.name }}</a></h5>
                                         <p class="card-text">{{ hero.place }}</p>
                                     </div>
                                 </div>
@@ -61,6 +61,28 @@
 
                 </div>
                 <!-- /.row -->
+
+
+                <h1 style="text-align: center">Volunteers</h1>
+                <br>
+
+
+                <div class="row">
+                    {% for hero in team %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+
+                                <div class="card border-info mb-3" style="max-width: 18rem;">
+{#                                    <div class="card-header">Header</div>#}
+                                    <div class="card-body">
+                                        <h5 class="card-title"> {{ hero.name }}</h5>
+                                        <!-- <p class="card-text">{{ hero.place }}</p> -->
+                                    </div>
+                                </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
 
             </div>
             <!-- /.col-lg-9 -->

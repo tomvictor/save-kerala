@@ -100,7 +100,7 @@ class About(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["heroes"] = Hero.objects.all().order_by("rank")
-        context["team"] = Hero.objects.all().order_by("rank")[3:]
+        context["team"] = Community.objects.all().order_by("rank")
         return context
 
 
